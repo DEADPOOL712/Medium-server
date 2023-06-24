@@ -12,10 +12,11 @@ router.post("/publish", async (req, res) => {
     // get blog data from client
     const { title, content, tags, author } = req.body;
     // saveing blog to database
+    const testTags = ["css", "html"];
     const blog = new blogs({
       title: title,
       content: content,
-      tags: tags,
+      tags: testTags,
       author: author,
     });
     await blog.save();
@@ -29,7 +30,7 @@ router.post("/publish", async (req, res) => {
 // deleting blogs by id
 router.post("/delete", async (req, res) => {
   try {
-    //below line will change in future
+    //below line might change in future
     const { id } = req.body;
     // deleting blog from database
     const deletedBlog = await blogs.findByIdAndDelete(id);
