@@ -6,6 +6,9 @@ const schema = mongoose.Schema({
   tags: { Array, required: true },
   author: { String, required: true },
   date: { Date, default: Date.now },
-  comments: { Array, default: [] },
-  likes: { Number, default: 0 },
+  Comments: { Array, default: [] },
 });
+
+const blogs = mongoose.model("blogs", blogSchema);
+
+module.exports = blogs;

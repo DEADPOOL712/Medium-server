@@ -2,6 +2,14 @@ require("dotenv").config({ path: "./config/.env" });
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+const users = require("./model/user-model");
+const blogs = require("./model/blog-model");
+const getRouter = require("./routes/getRoutes");
+const postRouter = require("./routes/postRoutes");
+
+// routes handler
+app.use("/", getRouter);
+app.use("/", postRouter);
 
 // connect to database
 mongoose.set("strictQuery", false);
