@@ -7,6 +7,7 @@ const schema = mongoose.Schema({
   author: { String, required: true },
   date: { Date, default: Date.now },
   Comments: { Array, default: [] },
+  likes: { Number, default: 0 },
 });
 
 const blogs = mongoose.model("blogs", blogSchema);
