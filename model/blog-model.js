@@ -6,7 +6,7 @@ const schema = mongoose.Schema({
   tags: { Array, required: true },
   author: { String, required: true },
   date: { Date, default: Date.now },
-  Comments: { Array, default: [] },
+  comments: { Array, default: [] },
   likes: { Number, default: 0 },
 });
 
