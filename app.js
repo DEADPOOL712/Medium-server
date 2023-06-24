@@ -6,7 +6,7 @@ const users = require("./model/user-model");
 const blogs = require("./model/blog-model");
 const getRouter = require("./routes/getRoutes");
 const postRouter = require("./routes/postRoutes");
-
+//test-merge...
 // routes handler
 app.use("/", getRouter);
 app.use("/", postRouter);
