@@ -14,11 +14,6 @@ mongoose
     console.log("Connection failed !\n", err);
   });
 
-// testing db
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
-
 // starting server on PORT
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
