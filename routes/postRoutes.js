@@ -6,7 +6,6 @@ const blogs = require("../model/blog-model");
 router.post("/", (req, res) => {
   res.send("Home post req");
 });
-
 // published blogs
 router.post("/publish", async (req, res) => {
   try {
