@@ -7,6 +7,9 @@ const blogs = require("./model/blog-model");
 const getRouter = require("./routes/getRoutes");
 const postRouter = require("./routes/postRoutes");
 
+// app configaration
+app.use(express.json());
+
 // routes handler
 app.use("/", getRouter);
 app.use("/", postRouter);
