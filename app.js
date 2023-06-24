@@ -26,4 +26,5 @@ mongoose
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log("Server is live on PORT :", PORT);
+  console.log("http://localhost:8080");
 });
