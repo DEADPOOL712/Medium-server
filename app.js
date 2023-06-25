@@ -6,10 +6,11 @@ const users = require("./model/user-model");
 const blogs = require("./model/blog-model");
 const getRouter = require("./routes/getRoutes");
 const postRouter = require("./routes/postRoutes");
+const cors = require("cors");
 
 // app configaration
 app.use(express.json());
-
+app.use(cors());
 // routes handler
 app.use("/", getRouter);
 app.use("/", postRouter);
