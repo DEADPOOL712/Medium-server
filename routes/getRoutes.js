@@ -43,7 +43,7 @@ router.get("/author", async (req, res) => {
 // fetch random blogs based on size
 router.get("/random", async (req, res) => {
   try {
-    const size = 1;
+    const size = 3;
     randomBlogs = await blogs.aggregate([{ $sample: { size: size } }]);
     if (!randomBlogs) {
       res.status(404).send("No blogs found!");
